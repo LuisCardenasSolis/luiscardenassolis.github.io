@@ -1,0 +1,14 @@
+node_modules
+public
+dist
+
+# Standard
+**/.git
+**/.svn
+**/.hg
+
+# lockfiles
+pnpm-lock.yaml
+pnpm-workspace.yaml
+yarn.lock
+package-lock.json

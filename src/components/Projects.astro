@@ -1,0 +1,67 @@
+---
+const projects = [
+  {
+    label: 'Go · Linux · Zimbra',
+    title: 'Gestor SSL para Zimbra',
+    desc: 'CLI en Go para emisión, renovación y despliegue automático de certificados Let\'s Encrypt en servidores Zimbra. Validación DNS, control de expiración y CRON.',
+    tech: ['Go', 'Cobra CLI', 'Linux', 'Zimbra'],
+  },
+  {
+    label: 'React · Node.js · PostgreSQL',
+    title: 'Dashboard Antispam + API MailScanner',
+    desc: 'Panel de control para gestión de MailScanner con API REST. Integración PostgreSQL para correos y dominios de Postfix. JWT, encriptación y seguridad de acceso.',
+    tech: ['React', 'Node.js', 'Express', 'Perl', 'JWT', 'PostgreSQL'],
+  },
+  {
+    label: 'Astro · Nginx · GitHub Actions',
+    title: 'Plataforma Cloud – NXTEP',
+    desc: 'Infraestructura cloud completa con Nginx como reverse proxy, Landing Page, CMS Directus y CI/CD automatizado con GitHub Actions.',
+    tech: ['Astro', 'Preact', 'Tailwind CSS', 'Directus', 'Nginx'],
+  },
+  {
+    label: 'Python · Odoo',
+    title: 'Módulo de Proyectos y Soportes Odoo',
+    desc: 'Módulo personalizado para contratos de soporte, gestión de tickets y reportes PDF. Automatización del seguimiento y organización del servicio técnico.',
+    tech: ['Python', 'Odoo', 'PDF Reports'],
+  },
+  {
+    label: 'Bash · Go · Seguridad',
+    title: 'LockHacking – Anti-Spam Shield',
+    desc: 'Servicio de detección y protección de cuentas hackeadas en servidores de correo. Valida conexiones, autenticaciones fallidas y cola de mensajes, bloqueando cuentas vulneradas.',
+    tech: ['Bash', 'Go', 'Postfix'],
+  },
+  {
+    label: 'Astro · AWS · CMS',
+    title: 'Web Sporade & Cielo – Grupo AJE',
+    desc: 'Sitios oficiales con soporte multilenguaje, selección de países y personalización dinámica vía CMS. Desplegados en AWS para Grupo AJE.',
+    tech: ['Astro', 'AWS', 'CMS', 'i18n'],
+  },
+];
+---
+
+<section id="projects" class="border-b border-dim px-8 py-14 max-w-6xl mx-auto">
+  <div class="flex items-center gap-4 mb-10">
+    <span class="font-mono text-[11px] text-accent opacity-60">02</span>
+    <span class="font-mono text-[11px] uppercase tracking-widest text-muted">Proyectos destacados</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-[rgba(100,120,255,0.15)] border border-dim">
+    {projects.map(({ label, title, desc, tech }) => (
+      <div class="group relative p-7 hover:bg-surface transition-colors cursor-pointer">
+        <span class="absolute top-6 right-6 text-muted text-sm group-hover:text-accent2 transition-colors">↗</span>
+
+        <p class="mb-3 font-mono text-[10px] uppercase tracking-widest text-accent3">{label}</p>
+        <h3 class="mb-2 text-[1rem] font-bold leading-snug text-[#e8e8f0] pr-6">{title}</h3>
+        <p class="mb-4 text-[0.8rem] leading-relaxed text-muted">{desc}</p>
+
+        <div class="flex flex-wrap gap-1.5">
+          {tech.map(t => (
+            <span class="font-mono text-[10px] px-2 py-0.5 bg-accent/10 text-accent rounded-sm tracking-wide">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

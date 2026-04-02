@@ -1,0 +1,50 @@
+---
+const categories = [
+  {
+    title: 'Frontend',
+    tags: ['React.js', 'Next.js', 'Vue.js', 'Astro', 'Tailwind CSS', 'HTML/CSS', 'JavaScript'],
+  },
+  {
+    title: 'Backend',
+    tags: ['Node.js', 'Express.js', 'Python', 'Go', 'PHP', 'Perl', 'Java'],
+  },
+  {
+    title: 'Bases de datos',
+    tags: ['PostgreSQL', 'MySQL', 'MongoDB'],
+  },
+  {
+    title: 'Infraestructura',
+    tags: ['GNU/Linux', 'Docker', 'Ansible', 'AWS', 'Nginx', 'Apache', 'Proxmox', 'VMware'],
+  },
+  {
+    title: 'DevOps & Monitoring',
+    tags: ['GitHub Actions', 'Git', 'Zabbix', 'Grafana', 'Bash scripting', 'Apache Kafka'],
+  },
+  {
+    title: 'Seguridad & Networking',
+    tags: ['pfSense', 'Fortinet', 'Sophos', 'MailScanner', 'Zimbra', 'Nextcloud', 'Bacula', 'Veeam'],
+  },
+];
+---
+
+<section id="skills" class="border-b border-dim px-8 py-14 max-w-6xl mx-auto">
+  <div class="flex items-center gap-4 mb-10">
+    <span class="font-mono text-[11px] text-accent opacity-60">03</span>
+    <span class="font-mono text-[11px] uppercase tracking-widest text-muted">Stack tecnológico</span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-[rgba(100,120,255,0.15)] border border-dim">
+    {categories.map(({ title, tags }) => (
+      <div class="p-6">
+        <p class="mb-4 font-mono text-[11px] uppercase tracking-widest text-accent">{title}</p>
+        <div class="flex flex-wrap gap-1.5">
+          {tags.map(tag => (
+            <span class="font-mono text-[11px] px-2.5 py-1 border border-[rgba(100,120,255,0.15)] text-muted hover:border-accent2 hover:text-accent2 transition-colors rounded-sm cursor-default">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

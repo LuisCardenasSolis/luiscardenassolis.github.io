@@ -1,0 +1,27 @@
+---
+const items = [
+  { label: 'Email',    value: 'luiscardenas6498@gmail.com', href: 'mailto:luiscardenas6498@gmail.com' },
+  { label: 'Teléfono', value: '+51 936 620 635', href: null },
+  { label: 'LinkedIn', value: 'luis-cardenas-solis', href: 'https://linkedin.com/in/luis-cardenas-solis' },
+  { label: 'Ubicación', value: 'Perú · Remoto disponible', href: null },
+];
+---
+
+<section id="contact" class="border-b border-dim px-8 py-14 max-w-6xl mx-auto">
+  <div class="flex items-center gap-4 mb-10">
+    <span class="font-mono text-[11px] text-accent opacity-60">05</span>
+    <span class="font-mono text-[11px] uppercase tracking-widest text-muted">Contacto</span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 divide-x divide-y divide-[rgba(100,120,255,0.15)] border border-dim">
+    {items.map(({ label, value, href }) => (
+      <div class="p-6">
+        <p class="mb-1.5 font-mono text-[10px] uppercase tracking-widest text-muted">{label}</p>
+        {href
+          ? <a href={href} class="text-[0.9rem] text-accent hover:underline">{value}</a>
+          : <p class="text-[0.9rem] text-[#e8e8f0]">{value}</p>
+        }
+      </div>
+    ))}
+  </div>
+</section>

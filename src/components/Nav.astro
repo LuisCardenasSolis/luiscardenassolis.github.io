@@ -1,0 +1,78 @@
+---
+const links = [
+  { label: 'experiencia', href: '#experience' },
+  { label: 'proyectos', href: '#projects' },
+  { label: 'skills', href: '#skills' },
+  { label: 'contacto', href: '#contact' }
+]
+---
+
+<header class="sticky top-0 z-50 border-b border-dim bg-bg/90 backdrop-blur-md">
+  <nav class="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
+    <span class="font-mono text-[13px] tracking-widest text-accent2">luis@cardenas ~ $</span>
+
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Abrir menú">
+      <span class="block w-5 h-px bg-[#e8e8f0] transition-all duration-300" id="bar1"></span>
+      <span class="block w-5 h-px bg-[#e8e8f0] transition-all duration-300" id="bar2"></span>
+      <span class="block w-5 h-px bg-[#e8e8f0] transition-all duration-300" id="bar3"></span>
+    </button>
+
+    <div class="hidden md:flex gap-6">
+      {
+        links.map(({ label, href }) => (
+          <a
+            href={href}
+            class="font-mono text-[11px] uppercase tracking-widest text-muted hover:text-[#e8e8f0] transition-colors">
+            {label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+
+    <div
+    id="mobile-menu"
+    class="md:hidden hidden absolute w-full flex-col border-t border-dim bg-bg px-6 py-4 gap-4">
+    {
+      links.map(({ label, href }) => (
+        <a
+          href={href}
+          class="mobile-link font-mono text-[12px] uppercase tracking-widest text-muted hover:text-[#e8e8f0] transition-colors py-1">
+          {label}
+        </a>
+      ))
+    }
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn')!
+  const menu = document.getElementById('mobile-menu')!
+  const bar1 = document.getElementById('bar1')!
+  const bar2 = document.getElementById('bar2')!
+  const bar3 = document.getElementById('bar3')!
+
+  let open = false
+
+  const close = () => {
+    open = false
+    menu.classList.add('hidden')
+    menu.classList.remove('flex')
+    bar1.style.transform = ''
+    bar2.style.opacity = '1'
+    bar3.style.transform = ''
+  }
+
+  btn.addEventListener('click', () => {
+    open = !open
+    menu.classList.toggle('hidden', !open)
+    menu.classList.toggle('flex', open)
+    bar1.style.transform = open ? 'translateY(7px) rotate(45deg)' : ''
+    bar2.style.opacity = open ? '0' : '1'
+    bar3.style.transform = open ? 'translateY(-7px) rotate(-45deg)' : ''
+  })
+
+  document.querySelectorAll('.mobile-link').forEach((link) => {
+    link.addEventListener('click', close)
+  })
+</script>

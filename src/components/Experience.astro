@@ -1,0 +1,52 @@
+---
+const jobs = [
+  {
+    date: 'Mar 2024 — actualidad',
+    company: 'NXTEP',
+    role: 'Tech Lead · Full Stack Developer',
+    desc: 'Liderazgo del área tecnológica. Arquitectura de plataforma, desarrollo Frontend y API, gestión de infraestructura y CI/CD con GitHub Actions. Stack: Astro, Node.js, Directus, Nginx.'
+  },
+  {
+    date: 'Jul 2023 — actualidad',
+    company: 'Freelance',
+    role: 'Full Stack Developer · Consultor Tecnológico',
+    desc: 'Soluciones a medida para empresas y startups: apps web, integración de APIs, migraciones de infraestructura y personalización de sistemas.'
+  },
+  {
+    date: 'Jul 2019 — Jun 2023',
+    company: 'PERULINUX NG S.A.C.',
+    role: 'Consultor Tecnológico · Software Developer',
+    desc: 'Proyectos con servicios open source y servidores cloud Linux. Automatización del ~45% de los servicios, mejoras en eficiencia operativa y tiempos de ejecución.'
+  },
+  {
+    date: 'Jun — Ago 2018',
+    company: 'BIZLINKS S.A.C.',
+    role: 'Developer · Gestor de Servidores IHS',
+    desc: '11 aplicaciones personalizadas + app de consola para logs en servidores IHS. Reducción del 48% en uso de almacenamiento.'
+  }
+]
+---
+
+<section id="exp" class="border-b border-dim px-6 md:px-8 py-14 max-w-6xl mx-auto">
+  <div class="flex items-center gap-4 mb-10">
+    <span class="font-mono text-[11px] text-accent opacity-60">01</span>
+    <span class="font-mono text-[11px] uppercase tracking-widest text-muted">Experiencia laboral</span>
+  </div>
+
+  <div class="divide-y divide-[rgba(100,120,255,0.15)]">
+    {
+      jobs.map(({ date, company, role, desc }) => (
+        <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-1 md:gap-8 py-6 hover:bg-accent/3 transition-colors">
+          <p class="font-mono text-[11px] text-muted md:pt-0.5">{date}</p>
+          <div>
+            <p class="mb-1 font-mono text-[11px] uppercase tracking-widest font-semibold text-accent2">
+              {company}
+            </p>
+            <p class="mb-1.5 text-[1rem] font-bold text-[#e8e8f0]">{role}</p>
+            <p class="text-[0.85rem] leading-relaxed text-muted">{desc}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+const certs = [
+  { name: 'LPIC-2 Linux Engineer', by: 'Linux Professional Institute · 2024' },
+  { name: 'RHCSA v8 – Red Hat Certified System Administrator', by: 'Red Hat · 2023' },
+  { name: 'LPIC-1 Linux Administrator', by: 'Linux Professional Institute · 2019' },
+  { name: '1° Puesto — Hacka Entel Perú', by: 'Entel · Start UPC · 2021' },
+  { name: '1° Puesto — Décimo Superior, TECSUP', by: 'Administración de Redes y Comunicaciones · 2019' },
+];
+---
+
+<section class="border-b border-dim px-8 py-14 max-w-6xl mx-auto">
+  <div class="flex items-center gap-4 mb-10">
+    <span class="font-mono text-[11px] text-accent opacity-60">04</span>
+    <span class="font-mono text-[11px] uppercase tracking-widest text-muted">Certificaciones & Logros</span>
+  </div>
+
+  <div class="divide-y divide-[rgba(100,120,255,0.15)]">
+    {certs.map(({ name, by }) => (
+      <div class="flex items-center gap-4 py-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent2 shrink-0"></span>
+        <div>
+          <p class="text-[0.9rem] font-semibold text-[#e8e8f0]">{name}</p>
+          <p class="mt-0.5 font-mono text-[11px] text-muted">{by}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

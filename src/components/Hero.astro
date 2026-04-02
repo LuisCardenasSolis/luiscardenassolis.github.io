@@ -1,0 +1,52 @@
+<section class="relative border-b border-dim px-8 py-12 md:py-24 max-w-6xl mx-auto">
+  <div
+    class="pointer-events-none absolute -top-20 -right-20 w-96 h-96 rounded-full"
+    style="background: radial-gradient(circle, rgba(79,110,247,0.08) 0%, transparent 70%);">
+  </div>
+
+  <span
+    class="inline-block mb-6 border border-accent2/30 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-accent2">
+    disponible para proyectos
+  </span>
+
+  <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+    Luis <span class="text-accent">Cardenas</span><br />Solis
+  </h1>
+
+  <p class="mt-4 mb-8 max-w-xl text-[1.05rem] leading-relaxed text-muted">
+    Full Stack Developer &amp; Tech Lead con 7+ años construyendo sistemas robustos en Linux, cloud y
+    automatización. Desde APIs hasta infraestructura.
+  </p>
+
+  <div class="flex flex-wrap gap-4">
+    <a
+      href="#contact"
+      class="font-mono text-[12px] uppercase tracking-widest bg-accent text-white px-5 py-2.5 rounded-sm hover:opacity-85 transition-opacity">
+      Contactar →
+    </a>
+    <a
+      href="#projects"
+      class="font-mono text-[12px] uppercase tracking-widest border border-dim text-[#e8e8f0] px-5 py-2.5 rounded-sm hover:border-accent2 hover:text-accent2 transition-colors">
+      Ver proyectos
+    </a>
+  </div>
+
+  <div class="mt-12 flex flex-wrap gap-10 border-t border-dim pt-8">
+    {
+      [
+        { num: '7', suffix: '+', label: 'años de experiencia' },
+        { num: '11', suffix: '+', label: 'apps desarrolladas' },
+        { num: '45', suffix: '%', label: 'servicios automatizados' },
+        { num: '48', suffix: '%', label: 'reducción en storage' }
+      ].map(({ num, suffix, label }) => (
+        <div>
+          <p class="text-[2rem] font-extrabold leading-none text-[#e8e8f0]">
+            <span class="text-accent">{num}</span>
+            {suffix}
+          </p>
+          <p class="mt-1 font-mono text-[11px] uppercase tracking-widest text-muted">{label}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
