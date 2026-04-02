@@ -1,7 +1,6 @@
 <div align="center">
-```
-luis@cardenas:~$ whoami
-```
+
+![whoami](https://img.shields.io/badge/luis@cardenas:~$-whoami-0a0a0f?style=flat-square&logo=gnubash&logoColor=22d9a0)
 
 # Luis Armando Cardenas Solis
 
@@ -19,7 +18,7 @@ Perú · Disponible para proyectos remotos
 
 ### $ about --me
 
-Especialista en TI con **7+ años** de experiencia construyendo sistemas robustos en entornos productivos. Me muevo cómodo entre el frontend y la infraestructura — desde una UI en React hasta un servidor Linux optimizado con Ansible.
+Especialista en TI con más de 7 años de experiencia diseñando y desarrollando sistemas robustos para entornos productivos. Experiencia integral en frontend, backend e infraestructura, enfocado en rendimiento, escalabilidad y buenas prácticas.
 
 Actualmente **Tech Lead** en [NXTEP](https://nxtep.com), liderando arquitectura, desarrollo y despliegue en producción.
 
