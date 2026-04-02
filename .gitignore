@@ -26,4 +26,3 @@ pnpm-debug.log*
 # pnpm, yarn, and npm lock files
 pnpm-lock.yaml
 yarn.lock
-package-lock.json
